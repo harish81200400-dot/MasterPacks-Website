@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
-import { TickerTape } from './components/TickerTape';
 import { AssetCategories } from './components/AssetCategories';
 import { WhyChoose } from './components/WhyChoose';
 import { WorkflowSteps } from './components/WorkflowSteps';
@@ -11,7 +10,6 @@ import { PricingTable } from './components/PricingTable';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { CheckoutModal } from './components/CheckoutModal';
-import { WhatsAppButton } from './components/WhatsAppButton';
 
 export default function App() {
   const [currency, setCurrency] = useState<'INR' | 'USD'>('INR');
@@ -41,9 +39,6 @@ export default function App() {
         onOpenCheckout={handleOpenCheckout}
         currency={currency}
       />
-
-      {/* Infinite Ticker Tape */}
-      <TickerTape />
 
       {/* What It Helps You Create */}
       <AssetCategories />
@@ -82,9 +77,6 @@ export default function App() {
         onClose={() => setIsCheckoutOpen(false)}
         currency={currency}
       />
-
-      {/* Floating WhatsApp Support Button */}
-      <WhatsAppButton />
     </div>
   );
 }

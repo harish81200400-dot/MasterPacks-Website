@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Zap, Sparkles, Menu, X, ShieldCheck } from 'lucide-react';
 import logoImg from '../assets/images/masterpacks_logo_1785221159691.jpg';
-import { WhatsAppLogoSVG } from './WhatsAppButton';
 
 interface NavbarProps {
   onOpenCheckout: () => void;
@@ -51,26 +50,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckout, currency, onTogg
         {/* Desktop Nav Links */}
         <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
           <a href="#what-it-helps" className="hover:text-blue-400 transition-colors">Showcase</a>
-          <a href="#why-choose" className="hover:text-blue-400 transition-colors">Features</a>
-          <a href="#workflow" className="hover:text-blue-400 transition-colors">3-Step Workflow</a>
           <a href="#testimonials" className="hover:text-blue-400 transition-colors">Reviews</a>
           <a href="#library" className="hover:text-blue-400 transition-colors">Library & Bonus</a>
+          <a href="#pricing" className="hover:text-blue-400 transition-colors">Pricing Offer</a>
           <a href="#faq" className="hover:text-blue-400 transition-colors">FAQ</a>
         </div>
 
         {/* Actions */}
         <div className="hidden sm:flex items-center gap-3">
-          <a
-            href="https://wa.link/19r6zu"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3.5 py-2 bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-500/40 text-emerald-400 hover:text-emerald-300 rounded-lg font-bold text-xs transition-all flex items-center gap-1.5"
-            title="Chat on WhatsApp"
-          >
-            <WhatsAppLogoSVG className="w-4 h-4 fill-emerald-400" />
-            <span>WhatsApp Us</span>
-          </a>
-
           <a 
             href="https://rzp.io/rzp/7cCIwcxW"
             target="_blank"
@@ -96,8 +83,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckout, currency, onTogg
         <div className="lg:hidden bg-slate-900 border-b border-slate-800 px-6 py-6 space-y-4 shadow-2xl">
           <div className="flex flex-col space-y-3 font-medium text-slate-200">
             <a href="#what-it-helps" onClick={() => setMobileMenuOpen(false)} className="hover:text-blue-400 py-1">Showcase</a>
-            <a href="#why-choose" onClick={() => setMobileMenuOpen(false)} className="hover:text-blue-400 py-1">Features</a>
-            <a href="#workflow" onClick={() => setMobileMenuOpen(false)} className="hover:text-blue-400 py-1">3-Step Workflow</a>
             <a href="#testimonials" onClick={() => setMobileMenuOpen(false)} className="hover:text-blue-400 py-1">2,127+ Reviews</a>
             <a href="#library" onClick={() => setMobileMenuOpen(false)} className="hover:text-blue-400 py-1">Library Vault</a>
             <a href="#pricing" onClick={() => setMobileMenuOpen(false)} className="hover:text-blue-400 py-1">Pricing Offer</a>
@@ -114,16 +99,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckout, currency, onTogg
                 {currency === 'INR' ? '₹ INR' : '$ USD'}
               </button>
             </div>
-            <a 
-              href="https://wa.link/19r6zu"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMobileMenuOpen(false)} 
-              className="w-full py-2.5 bg-emerald-600/20 border border-emerald-500/40 text-emerald-400 rounded-lg font-bold text-center text-xs flex items-center justify-center gap-2"
-            >
-              <WhatsAppLogoSVG className="w-4 h-4 fill-emerald-400" />
-              <span>Chat on WhatsApp</span>
-            </a>
             <a 
               href="https://rzp.io/rzp/7cCIwcxW"
               target="_blank"

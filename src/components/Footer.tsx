@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { ShieldCheck, Mail, FileText, X } from 'lucide-react';
 import logoImg from '../assets/images/masterpacks_logo_1785221159691.jpg';
-import { WhatsAppLogoSVG } from './WhatsAppButton';
 
 export const Footer: React.FC = () => {
   const [activeModal, setActiveModal] = useState<'contact' | 'privacy' | 'refund' | 'terms' | null>(null);
@@ -67,25 +66,8 @@ export const Footer: React.FC = () => {
                 <p className="text-sm text-slate-300 leading-relaxed">
                   Have questions about your order or need assistance with your After Effects templates?
                 </p>
-                
-                <div className="mt-4 p-4 bg-emerald-950/40 rounded-xl border border-emerald-500/30 flex items-center justify-between">
-                  <div>
-                    <p className="font-bold text-emerald-400 text-xs flex items-center gap-1.5">
-                      <WhatsAppLogoSVG className="w-4 h-4 fill-emerald-400" /> Instant WhatsApp Help
-                    </p>
-                    <p className="text-xs text-slate-300 mt-0.5">Chat directly with an editor on WhatsApp</p>
-                  </div>
-                  <a
-                    href="https://wa.link/19r6zu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-1.5 bg-[#25D366] hover:bg-[#20ba5a] text-slate-950 font-bold rounded-lg text-xs flex items-center gap-1.5 transition-colors"
-                  >
-                    <span>Chat Now</span>
-                  </a>
-                </div>
 
-                <div className="mt-3 p-4 bg-slate-800 rounded-xl border border-slate-700 font-mono text-xs text-slate-300">
+                <div className="mt-4 p-4 bg-slate-800 rounded-xl border border-slate-700 font-mono text-xs text-slate-300">
                   Email: <a href="mailto:finoprosworld@gmail.com" className="text-blue-400 underline">finoprosworld@gmail.com</a><br />
                   Response Time: Within 24 hours
                 </div>
