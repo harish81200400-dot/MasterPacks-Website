@@ -1,0 +1,8 @@
+{
+  "name": "MasterPacks",
+  "description": "Premium Motion Graphics Library for Editors",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
