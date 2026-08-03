@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="border-t border-slate-800 bg-slate-950 pt-8 sm:pt-12 pb-20 sm:pb-24 px-4 sm:px-6 text-slate-400 text-sm">
+      <footer className="border-t border-slate-800 bg-slate-950 pt-8 sm:pt-12 pb-24 sm:pb-28 px-4 sm:px-6 text-slate-400 text-sm">
         <div className="max-w-7xl mx-auto flex flex-col items-center mb-6 sm:mb-10 text-center">
           {/* Main Footer Buy Now CTA */}
           <div className="w-full max-w-4xl p-4 sm:p-8 rounded-2xl bg-gradient-to-r from-blue-950/80 via-indigo-950/80 to-purple-950/80 border border-blue-500/40 shadow-[0_0_50px_-10px_rgba(59,130,246,0.3)] flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 mb-6 sm:mb-12">
@@ -76,8 +76,8 @@ export const Footer: React.FC = () => {
 
         {/* Policy Modals */}
         {activeModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm animate-fade-in">
-            <div className="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full p-6 relative shadow-2xl text-slate-200">
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in">
+            <div className="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full p-5 sm:p-6 relative shadow-2xl text-slate-200 my-auto">
               <button
                 onClick={() => setActiveModal(null)}
                 className="absolute top-4 right-4 text-slate-400 hover:text-white p-2 rounded-lg bg-slate-800"
@@ -135,10 +135,11 @@ export const Footer: React.FC = () => {
       </footer>
 
       {/* Fixed Bottom Purchase Bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-slate-950/95 border-t border-slate-800/90 backdrop-blur-lg px-4 py-3 shadow-[0_-10px_30px_rgba(0,0,0,0.8)]">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-          <div className="hidden sm:flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg overflow-hidden border border-slate-700 bg-slate-900 shrink-0">
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-slate-950/95 border-t border-slate-800/90 backdrop-blur-lg px-3 sm:px-6 py-2.5 sm:py-3 shadow-[0_-10px_30px_rgba(0,0,0,0.8)]">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
+          {/* Left info badge (visible on mobile too in compact format) */}
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg overflow-hidden border border-slate-700 bg-slate-900 shrink-0">
               <img 
                 src={logoImg} 
                 alt="MasterPacks Logo" 
@@ -147,10 +148,9 @@ export const Footer: React.FC = () => {
               />
             </div>
             <div>
-              <p className="font-extrabold text-sm text-white flex items-center gap-1.5">
-                MasterPacks Complete Bundle
+              <p className="font-extrabold text-xs sm:text-sm text-white flex items-center gap-1">
+                MasterPacks Bundle
               </p>
-              <p className="text-xs text-slate-400 font-medium">Instant Download & Lifetime Access</p>
             </div>
           </div>
 
@@ -158,10 +158,10 @@ export const Footer: React.FC = () => {
             href="https://rzp.io/rzp/7cCIwcxW"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white rounded-xl font-extrabold text-base transition-all shadow-[0_0_25px_rgba(59,130,246,0.6)] hover:scale-105 flex items-center justify-center gap-2 group ml-auto"
+            className="px-5 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white rounded-xl font-extrabold text-xs sm:text-base transition-all shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:scale-105 flex items-center justify-center gap-1.5 sm:gap-2 group shrink-0"
           >
             <span>Buy now</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
       </div>
