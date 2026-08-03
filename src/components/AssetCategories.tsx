@@ -3,7 +3,7 @@ import { Play, ArrowRight } from 'lucide-react';
 
 export const AssetCategories: React.FC = () => {
   return (
-    <section id="what-it-helps" className="pt-2 pb-12 px-6 max-w-7xl mx-auto scroll-mt-20">
+    <section id="what-it-helps" className="pt-1 pb-8 sm:pb-12 px-4 sm:px-6 max-w-7xl mx-auto scroll-mt-20">
       {/* Live Video Showcase */}
       <div className="bg-slate-900 border border-slate-700/90 rounded-3xl overflow-hidden shadow-2xl relative p-3 sm:p-5 flex flex-col items-center">
         <div className="mb-3 text-center">

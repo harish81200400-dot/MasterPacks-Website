@@ -7,42 +7,41 @@ interface HeroSectionProps {
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout, currency }) => {
-  // Countdown Timer state
-  const [timeLeft, setTimeLeft] = useState({ hours: 4, minutes: 18, seconds: 42 });
+  // Countdown Timer state (25 minutes)
+  const [timeLeft, setTimeLeft] = useState({ minutes: 25, seconds: 0 });
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
         if (prev.seconds > 0) return { ...prev, seconds: prev.seconds - 1 };
-        if (prev.minutes > 0) return { ...prev, minutes: 59, seconds: 59 };
-        if (prev.hours > 0) return { hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        return { hours: 12, minutes: 0, seconds: 0 }; // reset cycle
+        if (prev.minutes > 0) return { minutes: prev.minutes - 1, seconds: 59 };
+        return { minutes: 25, seconds: 0 }; // reset cycle
       });
     }, 1000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <header className="relative px-6 pt-24 sm:pt-32 pb-4 text-center max-w-5xl mx-auto flex flex-col items-center overflow-hidden">
+    <header className="relative px-4 sm:px-6 pt-6 sm:pt-12 pb-2 text-center max-w-5xl mx-auto flex flex-col items-center overflow-hidden">
       {/* Background Ambient Glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-blue-600/15 blur-[120px] rounded-full pointer-events-none -z-10" />
       <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-purple-600/10 blur-[100px] rounded-full pointer-events-none -z-10" />
 
       {/* Ticker / Urgency Banner */}
-      <div className="mb-6 inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-blue-950/80 border border-blue-500/30 text-xs sm:text-sm font-medium text-blue-300 backdrop-blur-md shadow-inner">
-        <span className="flex items-center gap-1 text-yellow-400 font-bold">
-          <Flame className="w-4 h-4 fill-current animate-pulse text-yellow-500" />
+      <div className="mb-4 inline-flex items-center gap-2 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-red-950/90 via-amber-950/80 to-red-950/90 border-2 border-red-500/70 text-xs sm:text-sm font-extrabold text-amber-200 backdrop-blur-md shadow-[0_0_25px_rgba(239,68,68,0.4)]">
+        <span className="flex items-center gap-1.5 text-yellow-300 font-extrabold tracking-wide uppercase">
+          <Flame className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current animate-bounce text-yellow-400" />
           SPECIAL OFFER:
         </span>
-        <span>Price increases in</span>
-        <span className="font-mono font-bold text-white bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700">
-          {String(timeLeft.hours).padStart(2, '0')}h : {String(timeLeft.minutes).padStart(2, '0')}m : {String(timeLeft.seconds).padStart(2, '0')}s
+        <span className="font-bold text-slate-100 hidden sm:inline">Price increases in</span>
+        <span className="font-mono font-extrabold text-yellow-300 bg-slate-950/90 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-md border border-amber-500/50 shadow-inner text-xs sm:text-base tracking-wider">
+          {String(timeLeft.minutes).padStart(2, '0')}m : {String(timeLeft.seconds).padStart(2, '0')}s
         </span>
       </div>
 
       {/* Editor Badge */}
-      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700 mb-6 text-xs sm:text-sm font-semibold tracking-wider text-blue-400 shadow-md">
-        <Sparkles className="w-4 h-4 text-blue-400" />
+      <div className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-slate-800/80 border border-slate-700 mb-4 text-[11px] sm:text-sm font-semibold tracking-wider text-blue-400 shadow-md">
+        <Sparkles className="w-3.5 h-3.5 text-blue-400" />
         <span>BUILT BY EDITORS — FOR EDITORS</span>
       </div>
 

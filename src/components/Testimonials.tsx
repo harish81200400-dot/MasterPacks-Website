@@ -11,20 +11,20 @@ export const Testimonials: React.FC = () => {
   });
 
   return (
-    <section id="testimonials" className="py-20 px-6 max-w-7xl mx-auto scroll-mt-20">
-      <div className="text-center mb-12">
+    <section id="testimonials" className="py-8 sm:py-16 px-4 sm:px-6 max-w-7xl mx-auto scroll-mt-20">
+      <div className="text-center mb-6 sm:mb-12">
         <p className="text-blue-400 font-semibold tracking-widest text-xs uppercase mb-2">
           - LOVED BY CREATORS
         </p>
-        <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white tracking-tight">
           2,127+ Editors Trust Us
         </h2>
-        <p className="text-slate-400 mt-2 text-sm md:text-base">
+        <p className="text-slate-400 mt-2 text-xs sm:text-base">
           Read verified feedback from documentary editors, YouTubers, motion artists, and filmmakers worldwide.
         </p>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mt-8">
+        <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 mt-4 sm:mt-8">
           {[
             { id: 'all', label: `All Reviews (${REVIEWS_DATA.length})` },
             { id: 'editors', label: 'Video Editors' },
@@ -34,7 +34,7 @@ export const Testimonials: React.FC = () => {
             <button
               key={tab.id}
               onClick={() => setFilter(tab.id as any)}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-colors ${
+              className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs font-bold transition-colors ${
                 filter === tab.id
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700'
@@ -47,7 +47,7 @@ export const Testimonials: React.FC = () => {
       </div>
 
       {/* Grid of Reviews */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {filteredReviews.map((rev) => (
           <div
             key={rev.id}
