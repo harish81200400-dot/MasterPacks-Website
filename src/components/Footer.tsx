@@ -141,7 +141,7 @@ export const Footer: React.FC = () => {
             href="https://rzp.io/rzp/7cCIwcxW"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-[75%] max-w-xl py-2.5 sm:py-3.5 bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 hover:from-amber-400 hover:to-red-500 text-slate-950 font-black text-sm sm:text-lg tracking-wide rounded-xl transition-all duration-300 shadow-[0_0_30px_rgba(245,158,11,0.6)] hover:shadow-[0_0_40px_rgba(245,158,11,0.8)] hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group ring-2 ring-amber-300/80 animate-pulse text-center"
+            className="w-[75%] max-w-xl py-3.5 sm:py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-black text-base sm:text-xl tracking-wider rounded-2xl transition-all duration-300 shadow-[0_0_30px_rgba(59,130,246,0.6)] hover:shadow-[0_0_40px_rgba(147,51,234,0.8)] hover:scale-[1.03] active:scale-95 flex items-center justify-center gap-2.5 group text-center border border-blue-400/40"
           >
             <span className="uppercase">BUY NOW</span>
             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 stroke-[3] group-hover:translate-x-1 transition-transform" />
